@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+    <schema path="/org/gnome/rhythmbox/plugins/sync_playlist/" id="org.gnome.rhythmbox.plugins.sync_playlist">
+        <key type="s" name="tracks-folder">
+            <default>""</default>
+            <summary>Folder to export tracks</summary>
+            <description>Defines the folder where the tracks are exported to.</description>
+        </key>
+        <key type="s" name="playlists-folder">
+            <default>""</default>
+            <summary>Folder to export the playlists.</summary>
+            <description>Defines the folder where the playlists are exported to.</description>
+        </key>
+    </schema>
+</schemalist>

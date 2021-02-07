@@ -1,0 +1,11 @@
+[Plugin]
+Loader=python3
+Module=sync_playlist
+IAge=2
+Name=sync_playlist
+Depends=rb
+Description=sync playlist
+Authors=Werner Fürst <werner.fuerst@gmx.at>
+Copyright=Copyright © 2021 Werner Fürst
+Website=http://für.st
+Version=1.1.0
