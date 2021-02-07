@@ -59,6 +59,7 @@ GLIB_DIR="${HOME}/.local/share/rhythmbox/plugins/sync_playlist/schemas/"
 
 #build the dirs
 mkdir -p $PLUGIN_PATH
+mkdir -p $GLIB_DIR
 
 #copy the files
 cp -r "${SCRIPT_PATH}"* "$PLUGIN_PATH"
