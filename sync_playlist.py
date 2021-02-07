@@ -78,7 +78,7 @@ class SyncPlaylistPlugin (GObject.Object, Peas.Activatable):
             print(destination)
             destination_path = os.path.dirname(destination)
             print(destination_path)
-            os.makedirs(destination_path)
+            os.makedirs(destination_path,exist_ok=True)
             copy(fileunquoted, destination)
             file.write("#EXTINF:"+str(entry.get_ulong (RB.RhythmDBPropType.DURATION))+","+entry.get_string (RB.RhythmDBPropType.TITLE)+"\n")
             file.write(fileunquoted[1:]+"\n")
