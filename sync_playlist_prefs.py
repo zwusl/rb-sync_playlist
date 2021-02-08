@@ -19,6 +19,9 @@ from gi.repository import RB, Gtk, Gio, GObject, PeasGtk
 class SyncPlaylistConfigureDialog (GObject.Object, PeasGtk.Configurable):
     __gtype_name__ = 'SyncPlaylistConfigureDialog'
     object = GObject.property(type=GObject.Object)
+    '''
+    Settings dialog
+    '''
 
     def __init__(self):
         GObject.Object.__init__(self)
