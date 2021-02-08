@@ -52,6 +52,12 @@ class SyncPlaylistPlugin (GObject.Object, Peas.Activatable):
         sync_tracks_folder = settings.get_string("tracks-folder")
         sync_playlists_folder = settings.get_string("playlists-folder")
         
+        if (not os.path.isdir(sync_tracks_folder)) or (not os.path.isdir(sync_playlists_folder)):
+            print("folders not valid")
+            self.display_warning_message("No valid destination folder, please check settings in plugins->sync_playlist")
+            return
+
+        
         page = self.object.props.selected_page
         
         print(page.props.name)
@@ -115,3 +121,14 @@ class SyncPlaylistPlugin (GObject.Object, Peas.Activatable):
         app.remove_action("action_sync_playlist")
         self.action = None
         
+
+    def display_warning_message(self, message):
+        dialog = Gtk.MessageDialog(None,
+                                   Gtk.DialogFlags.MODAL,
+                                   Gtk.MessageType.WARNING,
+                                   Gtk.ButtonsType.OK,
+                                   _(message))
+
+        dialog.run()
+        dialog.destroy()
+
