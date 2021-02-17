@@ -3,6 +3,8 @@ Sync Playlists
 A Rhythmbox plugin to synchronize the selected playlist to a folder
 
 What can that be good for?
+
+You can use this plugin to transfer music from the linux desktop to your (Android) phone.
 Since the mtp connection is not reliable, at least not for my devices, this plugin
 can be used to transfer the tracks of a playlist to a folder.
 
